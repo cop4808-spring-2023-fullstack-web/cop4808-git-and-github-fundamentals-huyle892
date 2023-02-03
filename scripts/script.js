@@ -24,7 +24,10 @@ updateDisplay();
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            if(buttons[i].classList.contains('operand')) {
+            if((buttons[i].classList.contains('operand')||(buttons[i].classList.contains('pi')))) {
+                if(buttons[i].classList.contains('pi')){
+                    pi();
+                }
                 inputOperand(buttons[i].value);
                 updateDisplay();
             } else if(buttons[i].classList.contains('operator')) {
@@ -41,9 +44,19 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
+            } else if(buttons[i].classList.contains('log')){
+                logOfX(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('sqrt')){
+                sqrt(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('log10')){
+                log10OfX(displayValue);
+                updateDisplay();
+            }
         }
     )}
 }
@@ -181,4 +194,20 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+function logOfX(num){
+    return displayValue = Math.log(num).toFixed(9);
+}
+
+function pi(){
+    return displayValue = Math.PI.toFixed(9);
+}
+
+function sqrt(num){
+    return displayValue = Math.sqrt(num).toFixed(9);
+}
+
+function log10OfX(num){
+    return displayValue = Math.log10(num).toFixed(9);
 }
