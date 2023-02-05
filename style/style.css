@@ -111,32 +111,40 @@ button {
 
 .log10 {
     background-color: rgb(240,223,5);
+    font-weight: bold;
 }
 
 .log10:active{
     background-color: rgb(220,255,5);
+    font-weight: bold;
 }
 
 .sqrt{
     background-color: rgb(240,223,5);
+    font-weight: bold;
 }
 
 .sqrt:active{
     background-color: rgb(220,255,5);
+    font-weight: bold;
 }
 
 .pi {
     background-color: rgb(240,223,5);
+    font-weight: bold;
 }
 
 .pi:active{
     background-color: rgb(220,255,5);
+    font-weight: bold;
 }
 
 .log {
     background-color: rgb(240,223,5);
+    font-weight: bold;
 }
 
 .log:active{
     background-color: rgb(220,255,5);
+    font-weight: bold;
 }
