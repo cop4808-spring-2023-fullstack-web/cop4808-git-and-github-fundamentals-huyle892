@@ -24,7 +24,7 @@ updateDisplay();
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
-            //Adjust the if statement to treat pi number as an opperand
+            //Adjust the if statement to treat pi number as an opperand for calculating
             if((buttons[i].classList.contains('operand')||(buttons[i].classList.contains('pi')))) {
                 if(buttons[i].classList.contains('pi')){
                     pi();
