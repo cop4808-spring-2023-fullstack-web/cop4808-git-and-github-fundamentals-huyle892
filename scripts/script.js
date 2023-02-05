@@ -24,6 +24,7 @@ updateDisplay();
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
+            //Adjust the if statement to treat pi number as an opperand
             if((buttons[i].classList.contains('operand')||(buttons[i].classList.contains('pi')))) {
                 if(buttons[i].classList.contains('pi')){
                     pi();
@@ -196,18 +197,22 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
+//handle logarithm of a number
 function logOfX(num){
     return displayValue = Math.log(num).toFixed(9);
 }
 
+//represent the pi number
 function pi(){
     return displayValue = Math.PI.toFixed(9);
 }
 
+//calculate the square root of a number
 function sqrt(num){
     return displayValue = Math.sqrt(num).toFixed(9);
 }
 
+//calculate the logarithm 10 of a number
 function log10OfX(num){
     return displayValue = Math.log10(num).toFixed(9);
 }
