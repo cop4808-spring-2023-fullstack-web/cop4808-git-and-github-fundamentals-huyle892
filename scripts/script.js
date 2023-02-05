@@ -48,6 +48,7 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
+            //Couple else if for the new functions
             } else if(buttons[i].classList.contains('log')){
                 logOfX(displayValue);
                 updateDisplay();
